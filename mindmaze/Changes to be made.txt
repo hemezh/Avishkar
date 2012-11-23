@@ -1,0 +1,26 @@
+Ques 9 ) Problem statement : 
+Fill all the squares with numbers ranging from 1-7(both inclusive) and the angle bracket represent inequalities.
+
+Ques7)
+CHANGE : HintThink about english alphabet and tables.
+
+TO : HINT : Think about english alphabets and NXN tables. All digits are of 2-digits only.
+
+Ques6) 10 textboxes necessary
+and the words are : 
+
+*e*el
+b*d
+s*i*l
+swa**
+fo*
+*er*y
+a*ur*
+*u*dy
+*uo*e
+*e*a*e
+ed**
+sc*r*y
+l*p
+**lls
+  

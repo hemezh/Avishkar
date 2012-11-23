@@ -1,0 +1,54 @@
+<?php
+require_once('../functions.php');
+require_once("./mind_maze_functions.php") ;
+echo "hi" ;
+function getMapValue($field)
+{
+	$data = "SELECT map_value FROM mindmaze_map where map_field = \"".$field."\" " ;
+	return get_value($data) ;
+}
+//echo "<br />start" ;
+$starttime =  getMapValue("start_time");
+//echo "<br />end" ;
+ $endtime =  getMapValue("end_time");
+//echo "<br />current" ;
+ $current = date("y-m-d H:i:s", time()) ;
+$started = 0 ;
+//echo "<br />" ;
+// chking about event start 
+//echo $current_timestamp =  strtotime("now");
+//$current = date("y-m-d H:i:s", $current_timestamp) ;
+$duration = get_time_difference($starttime,$endtime);
+$arr_chk_contest_start = get_time_difference($current,$starttime);
+//print_r($arr_chk_contest_start);
+$arr_chk_contest_end = get_time_difference($current,$endtime);
+//print_r($arr_chk_contest_end);
+if($arr_chk_contest_start['iscorrect']==1)
+{
+	// time remaining
+	// contest not started
+	//$arr = get_time_difference($current,$starttime);
+	$label = "Event Will start in" ;
+	$diff = get_time_difference($current,$starttime);
+}
+else if ( $arr_chk_contest_start['iscorrect'] == -1 && $arr_chk_contest_end['iscorrect'] == -1 )
+{
+	$label = "Event over before" ;
+	$diff = get_time_difference($endtime,$current);
+}
+else
+{
+	// contest started 
+	$label = "Event end in" ;
+	$diff = get_time_difference($current,$endtime);
+}
+
+//echo "<hr />" ;
+$diff['label'] = $label ;
+
+//echo $label ;
+//echo ": ".$diff['days']." days".$diff['hours']." hrs".$diff['minutes']." min" ;
+//print_r($diff);
+//echo "<hr />" ;
+//echo "bye" ; 
+?>

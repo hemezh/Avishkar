@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /199_files/
+Disallow: /css/
+Disallow: /dualSlider/
+Disallow: /events/
+Disallow: /images/
+Disallow: /matrix_files/
+Disallow: /scripts/
+Disallow: /skin2_files/
+Disallow: /sponsor/
+Disallow: /styles/
+Disallow: /user/

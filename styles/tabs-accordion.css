@@ -1,0 +1,111 @@
+/* root element for accordion. decorated with rounded borders and gradient background image */
+#accordion {
+	width: 178px;
+	padding-bottom:30px;
+	margin-left:-3px;
+	margin-top: 9px;
+	font-size:13px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	height:800px;
+}
+/* accordion header */
+#accordion h2 {
+	margin:0;
+	font-size:13px;
+	font-weight:normal;
+	border:0px solid #fff;
+	cursor:pointer;
+	background-repeat:no-repeat;
+	height:36px;
+	color:#FFF;
+}
+/* currently active header */
+#accordion h2.current {
+	cursor:default;
+}
+/* accordion pane */
+#accordion .pane {
+/*	border:0px solid #fff; */
+	padding:0px;
+	color:#072331;
+	font-size:12px;
+	padding-left:10px;
+}
+#accordion .paneFixed {
+/*	border:0px solid #fff; */
+	padding:0px;
+	color:#072331;
+	font-size:12px;
+	padding-left:10px;
+}
+#accordion .pane ul, .paneFixed ul { 
+	background:#072331;
+	padding:0px; margin:0px;  position:relative; left: -10px; width:140px;
+	list-style:none;}
+#accordion .pane ul li, .paneFixed ul li {
+	background-position:left;
+	background-repeat:no-repeat;
+	list-style:none;width: 138px;
+padding:8px 0px 8px 20px;
+background:#fbfbfb;
+	color:#072331;
+-webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4);
+-moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.4);
+	text-align:left;
+
+}
+
+#banner_lable_main { 
+	overflow:hidden;
+	min-width:0px;
+	cursor:pointer;
+}
+.unhoverd{
+	color:#ababab;
+	position:absolute;
+	padding: 0 20px ;
+	line-height:37px;
+	margin-top:0px;
+	width:120px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+	opacity:0.85;
+	-khtml-opacity: 0.85;
+    -moz-opacity:0.85;
+	filter: alpha(opacity=85);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+	
+	text-transform:uppercase;
+	background:#072331;
+	color:#D5D5D5;
+	box-shadow:0 0.1px 2px rgba(0, 0, 0, 0.3), 0 0 80px rgba(0, 0, 0, 1) inset;
+	
+background-color: #333;
+border-top: 1px solid #5A5A5A;
+border-bottom: 1px solid #111;
+	height:36px;
+	text-align:left;
+}
+.hoverd , .activeplus{
+	height:36px;
+	text-transform:uppercase;
+	line-height:37px;
+	width:132px;
+	color:#10a2ff;
+	position:absolute;
+	padding:0 20px;
+	padding-top:0px;
+	z-index:1;
+	background:#2D2D2D;
+	opacity:0;
+	-khtml-opacity: 0;
+    -moz-opacity:0;
+	filter: alpha(opacity=0);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	box-shadow:0 0px 4px rgba(0, 0, 0, 0.3), 0 0 100px rgba(0, 0, 0,5) inset;
+	text-align:left;
+border-top: 1px solid #5A5A5A;
+border-bottom: 1px solid #111;
+}
+.activeplus{
+	cursor:default;
+}
